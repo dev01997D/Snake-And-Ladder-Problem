@@ -24,7 +24,10 @@ public class snakeAndLadder {
 				player_Position=player_Position;
 				break;
 			case ladder:
-				player_Position+=numberOfMove;
+				if (player_Position+numberOfMove>100)
+					player_Position=player_Position;
+				else
+					player_Position+=numberOfMove;
 				break;
 			case snake:
 				if (player_Position-numberOfMove>=0)
