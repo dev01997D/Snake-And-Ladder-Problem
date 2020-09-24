@@ -8,6 +8,9 @@ public class snakeAndLadder {
 
 		//Welcome statement
 		System.out.println("Welcome to Snake and Ladder Simulator");
+		
+		//computation
+		int numberOfMove=(int) (Math.floor(Math.random()*10)%7);
 	}
 
 }
