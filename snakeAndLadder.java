@@ -14,20 +14,25 @@ public class snakeAndLadder {
 		//Welcome statement
 		System.out.println("Welcome to Snake and Ladder Simulator");
 
-		//computation
-		int numberOfMove=(int) (Math.floor(Math.random()*10)%7);
-		int optionOfPlay=(int) (Math.floor(Math.random()*10)%3);
+		while(player_Position<100) {
+			//computation
+			int numberOfMove=(int) (Math.floor(Math.random()*10)%7);
+			int optionOfPlay=(int) (Math.floor(Math.random()*10)%3);
 
-		switch(optionOfPlay) {
-		case noPlay:
-			player_Position=player_Position;
-			break;
-		case ladder:
-			player_Position+=numberOfMove;
-			break;
-		case snake:
-			player_Position-=numberOfMove;
-			break;
+			switch(optionOfPlay) {
+			case noPlay:
+				player_Position=player_Position;
+				break;
+			case ladder:
+				player_Position+=numberOfMove;
+				break;
+			case snake:
+				if (player_Position-numberOfMove>=0)
+					player_Position-=numberOfMove;
+				else
+					player_Position=0;
+				break;
+			}
 		}
 	}
 
